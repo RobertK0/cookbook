@@ -39,6 +39,17 @@ class RecipeRepository extends ServiceEntityRepository
         }
     }
 
+    public function getAllRecipes(): array
+    {
+        $qb = $this->getEntityManager()->createQueryBuilder();
+
+        $qb->select('recipe')
+           ->from('App\Entity\Recipe', 'recipe');
+
+        $query = $qb->getQuery();
+        return $query->getResult();
+    }
+
 //    /**
 //     * @return Recipe[] Returns an array of Recipe objects
 //     */
