@@ -1,4 +1,5 @@
 {% block header %}
+	{% set currentPath = app.request.attributes.get('_route') %}
 	<nav class="navbar navbar-expand-sm navbar-light bg-light">
 		<div class="container">
 			<a class="navbar-brand" href="#">Cookbook</a>
@@ -8,12 +9,12 @@
 			<div class="collapse navbar-collapse" id="collapsibleNavId">
 				<ul class="navbar-nav me-auto mt-2 mt-lg-0">
 					<li class="nav-item">
-						<a class="nav-link active" href="/" aria-current="page">Home
+						<a class="nav-link {{ currentPath == 'home' ? 'active' }}" href="{{ path('home') }}" aria-current="page">Home
 							<span class="visually-hidden">(current)</span>
 						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="/my_recipes">My recipes</a>
+						<a class="nav-link {{ currentPath == 'my_recipes' ? 'active' }}" href="{{ path('my_recipes') }}">My recipes</a>
 					</li>
 					{# <li class="nav-item dropdown"> #}
 				{# <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a> #}
