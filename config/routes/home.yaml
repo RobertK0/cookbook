@@ -2,3 +2,8 @@ home:
     path: /
     methods: [GET]
     controller: App\Controller\Homepage::devHomepageAction
+    
+my_recipes:
+    path: /my_recipes
+    methods: [GET]
+    controller: App\Controller\MyRecipes
