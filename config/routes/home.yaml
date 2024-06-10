@@ -7,3 +7,8 @@ my_recipes:
     path: /my_recipes
     methods: [GET]
     controller: App\Controller\MyRecipes
+
+add_recipe:
+    path: /add_recipe
+    methods: [GET]
+    controller: App\Controller\AddRecipe
