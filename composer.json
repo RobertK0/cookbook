@@ -37,7 +37,9 @@
   "autoload": {
     "psr-4": {
       "App\\": "src/",
-      "App\\Controller\\": "src/App/Controller/"
+      "App\\Controller\\": "src/App/Controller/",
+      "App\\Form\\": "src/App/Form/",
+      "App\\Entity\\": "src/App/Entity/"
     }
   },
   "autoload-dev": {

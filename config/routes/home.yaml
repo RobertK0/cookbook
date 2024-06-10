@@ -10,5 +10,5 @@ my_recipes:
 
 add_recipe:
     path: /add_recipe
-    methods: [GET]
+    methods: [GET, POST]
     controller: App\Controller\AddRecipe
