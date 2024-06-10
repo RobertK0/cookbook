@@ -1,15 +1,35 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-	<h2>This is add recipe page</h2>
+  <div class="container">
+  	<h2 class="my-5">This is add recipe page</h2>
 
-	<div>
-    {{ form_start(form, {attr: { class: 'js-custom-form' }}) }}
-      {{ form_row(form.name) }}
-      {{ form_row(form.description) }}
-      <button type="submit" class="btn btn-primary">Save recipe</button>
+    {{ form_start(form) }}
+      <div class="row mb-3">
+        {{ form_label(form.image) }}
+        <div class="col-9">
+          {{ form_widget(form.image) }}
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        {{ form_label(form.name) }}
+        <div class="col-9">
+          {{ form_widget(form.name) }}
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        {{ form_label(form.description) }}
+        <div class="col-9">
+          {{ form_widget(form.description) }}
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-lg w-100">
+        <strong>Save recipe</strong>
+      </button>
 
     {{ form_end(form, {render_rest: false}) }}
-    
-	</div>
+  </div>
 {% endblock %}
